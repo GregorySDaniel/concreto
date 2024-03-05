@@ -1,4 +1,4 @@
-import { Container, Main } from "./styles"
+import { Container, Main, Intro, Tags } from "./styles"
 import { Header } from '../../components/Header'
 import { Footer } from '../../components/Footer'
 import backgoundImg from '../../assets/background.jpg'
@@ -8,11 +8,25 @@ export function Home(){
     <Container>
       <Header/>
         <Main>
-            <div className="intro">
+            <Intro>
               <img src={backgoundImg} alt="Imagem de um Projeto" />
               <div className="gradient"></div>
-              <h1>Qualidade em <br/>cada obra.</h1>
-            </div>
+            </Intro>
+            <Tags>
+              <div>
+                <h1>Titulo</h1>
+                <p>descrição</p>
+              </div>
+              <div>
+                <h1>Titulo</h1>
+                <p>descrição</p>
+              </div>
+              <div>
+                <h1>Titulo</h1>
+                <p>descrição</p>
+              </div>
+            </Tags>
+
         </Main>
       <Footer/>
     </Container>

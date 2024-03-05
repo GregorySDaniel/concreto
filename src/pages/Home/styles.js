@@ -17,28 +17,35 @@ export const Main = styled.div`
   display: flex;
   flex-direction: column;
 
-  .intro {
-    position: relative;
+`;
 
-    h1 {
-      position: absolute;
-      top: 500px;
-      left: 300px;
-      font-size: 84px;
-    }
+export const Intro = styled.div`
+  position: relative;
 
-    img {
-      width: 100%;
-    }
-
-    .gradient {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
-    }
+  img {
+    width: 100%;
   }
+
+  .gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0));
+  }
+`;
+
+export const Tags = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+
+  padding: 0 300px;
+
+  margin-top: 100px;
+
+  align-items: center;
+  justify-content: space-between;
 
 `;
