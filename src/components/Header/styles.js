@@ -6,7 +6,7 @@ export const Container = styled.header`
   height: 100%;
   padding: 10px 250px;
 
-  background-color: ${({theme})=> theme.COLORS.WHITE};
+  background-color: ${({theme})=> theme.COLORS.BLUE_100};
   
   display: flex;
   justify-content: space-between;
@@ -16,9 +16,10 @@ export const Container = styled.header`
   a {
     color: ${({theme})=>theme.COLORS.BLACK};
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 600;
     padding: 2px;
-    border-bottom: 3px solid ${({theme})=>theme.COLORS.WHITE};
+    border-bottom: 3px solid ${({theme})=>theme.COLORS.BLUE_100};
+    
   }
 
   a:hover{

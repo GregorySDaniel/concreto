@@ -6,10 +6,10 @@ export function Header(){
     <Container>
       <img src={Logo} alt="Logo da Concreto" />
       <div>
-        <a href="#">Home</a>
-        <a href="#">Sobre</a>
-        <a href="#">Projetos</a>
-        <a href="#">Contato</a>
+        <a href="#">HOME</a>
+        <a href="#">SOBRE</a>
+        <a href="#">PROJETOS</a>
+        <a href="#">CONTATO</a>
       </div>
     </Container>
   )
