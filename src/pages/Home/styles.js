@@ -47,7 +47,7 @@ export const Tags = styled.div`
   margin-top: 100px;
 
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
 
 `;
 
@@ -71,3 +71,4 @@ export const Contact = styled.div`
     gap: 20px;
   }
 `;
+
