@@ -41,11 +41,11 @@ export const Tags = styled.div`
   flex-direction: row;
   gap: 50px;
 
-  padding: 0 300px;
+  padding: 0 200px;
 
   margin-top: 100px;
 
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 
 `;
