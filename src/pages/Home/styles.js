@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   width: 100%;
-  height: 100vw;
+  height: 100vh;
   display: grid;
 
   grid-template-rows: 80px auto 50px;
@@ -10,6 +10,7 @@ export const Container = styled.div`
   "header"
   "content"
   "footer";
+
 `;
 
 export const Main = styled.div`
@@ -48,4 +49,25 @@ export const Tags = styled.div`
   align-items: center;
   justify-content: space-around;
 
+`;
+
+export const Contact = styled.div`
+  padding: 100px 20px;
+  margin-top: 100px;
+  gap: 40px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-size: 32px;
+
+  color: ${({theme})=> theme.COLORS.TEXT};
+
+
+  section{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
 `;

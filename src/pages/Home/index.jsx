@@ -1,10 +1,12 @@
-import { Container, Main, Intro, Tags } from "./styles"
+import { Container, Main, Intro, Tags, Contact } from "./styles"
 import { Header } from '../../components/Header'
 import { Footer } from '../../components/Footer'
+import { Button } from '../../components/Button'
 import { Tag } from '../../components/Tag'
 import backgoundImg from '../../assets/background.jpg'
 import { IoConstruct, IoLeafSharp } from "react-icons/io5";
 import { MdHandshake } from "react-icons/md";
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 
 export function Home(){
@@ -31,6 +33,15 @@ export function Home(){
                 text="Na nossa construtora, a preocupação com o meio ambiente está presente em cada projeto. Utilizamos práticas sustentáveis, buscando reduzir o impacto ambiental. Nosso compromisso vai além da construção civil, é um compromisso com o futuro das próximas gerações." 
                 icon={<IoLeafSharp/>}/>
             </Tags>
+
+            <Contact>
+              <h1>SAIBA MAIS</h1>
+              <section>
+              <Button title="CONTATO"/>
+              <Button title="SOBRE"/>
+              <Button title="PROJETOS"/>
+              </section>
+            </Contact>
 
         </Main>
       <Footer/>

@@ -1,9 +1,10 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  border: 2px solid ${({theme})=>theme.COLORS.BLUE};
+  border: 1px solid #e0e0e0;
   border-radius: 8px;
-  background-color: ${({theme})=>theme.COLORS.BLUE_100};
+  
+  background-image: linear-gradient(to bottom, #ffffff, #f0f0f0);
 
   width: 300px;
   padding: 20px;
