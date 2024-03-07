@@ -35,6 +35,7 @@ export const Intro = styled.div`
     height: 100%;
     background: linear-gradient(to right, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0));
   }
+
 `;
 
 export const Tags = styled.div`
@@ -47,7 +48,7 @@ export const Tags = styled.div`
   margin-top: 100px;
 
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 
 `;
 
