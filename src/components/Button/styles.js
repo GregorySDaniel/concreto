@@ -14,6 +14,8 @@ export const Container = styled.button`
 
  transition: transform 0.2s;
 
+ white-space: nowrap;
+
 &:hover{
   transform: scale(1.1);
 }
