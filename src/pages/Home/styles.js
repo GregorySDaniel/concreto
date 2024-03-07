@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import background2 from '../../assets/bg-2.png'
 
 export const Container = styled.div`
   width: 100%;
@@ -53,23 +54,53 @@ export const Tags = styled.div`
 `;
 
 export const Contact = styled.div`
-  padding: 100px 20px;
   margin-top: 100px;
-  gap: 40px;
-
-  display: flex;
-  flex-direction: column;
+  background: url(${background2});
+  justify-content: center;
   align-items: center;
+  padding: 100px;
+  color: ${({theme})=>theme.COLORS.WHITE};
+  display: flex;
+  gap: 100px;
 
-  font-size: 32px;
+  h1{
+    font-size: 36px;
+  }
 
-  color: ${({theme})=> theme.COLORS.TEXT};
+  p {
+    font-size: 20px;
+  }
 
-
-  section{
+  div {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     gap: 20px;
   }
+
+  div:nth-child(2){
+  padding: 30px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  
+  transition: transform 0.2s;
+
+  &:hover{
+    transform: scale(1.1);
+  }
+  }
+
+  section {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    width: 100%;
+  }
+
+  button {
+    width: 330px;
+  }
+  
 `;
 

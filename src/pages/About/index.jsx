@@ -3,6 +3,7 @@ import { Header } from '../../components/Header'
 import { Footer } from '../../components/Footer'
 import { Button } from '../../components/Button'
 import img from '../../assets/background1.jpg'
+import { Link } from 'react-router-dom'
 import { FcStatistics, FcOk } from "react-icons/fc";
 
 
@@ -32,7 +33,9 @@ export function About () {
           <section>
             <h1>10 anos de experiência</h1>
             <p>Desde 2014, nossa empresa tem se destacado na prestação de serviços de construção para clientes em Tijucas.</p>
-            <Button title="Entre em Contato"/>
+            <Link to="/contato">
+              <Button title="Entre em Contato"/>
+            </Link>
           </section>
         </TagsSection>
       </Main>

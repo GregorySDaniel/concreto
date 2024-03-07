@@ -3,6 +3,7 @@ import { Header } from '../../components/Header'
 import { Footer } from '../../components/Footer'
 import { Button } from '../../components/Button'
 import { Tag } from '../../components/Tag'
+import { Link } from "react-router-dom"
 import backgoundImg from '../../assets/background.jpg'
 import { FcOvertime, FcCollaboration, FcLandscape } from "react-icons/fc";
 
@@ -33,12 +34,23 @@ export function Home(){
             </Tags>
 
             <Contact>
-              <h1>SAIBA MAIS</h1>
-              <section>
-              <Button title="CONTATO"/>
-              <Button title="SOBRE"/>
-              <Button title="PROJETOS"/>
-              </section>
+              <div>
+                <h1>Larga experiência no setor de construção civil.</h1>
+                <p>Mais de 5.000 m² de área construída desde 2014, a Construtora Concreto atua em Tijucas.</p>
+                <section>
+                  <Link to ="/sobre">
+                    <Button title="SAIBA MAIS"/>
+                  </Link>
+                  <Link to ="/contato">
+                    <Button title="ENTRE EM CONTATO"/>
+                  </Link>
+                </section>
+              </div>
+              <div>
+                <p>+ de</p>
+                <h1>5.000m²</h1>
+                <p>de área construida</p>
+              </div>
             </Contact>
 
         </Main>
