@@ -27,7 +27,7 @@ export const Container = styled.header`
   }
 
   img {
-    height: 100%;
+    width: 300px;
   }
 
   div {
