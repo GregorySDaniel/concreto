@@ -18,7 +18,6 @@ return(
         <section>
           <p>Todos</p>
           <p>Em andamento</p>
-          <p>Disponíveis</p>
           <p>Concluidos</p>
         </section>
       </Text>
