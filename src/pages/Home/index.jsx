@@ -21,7 +21,7 @@ export function Home(){
             <Tags>
               <Tag 
                 title="Experiência de mercado" 
-                text="Com mais de 10 anos de experiência no mercado, nossa construtora se destaca pela qualidade e excelência em cada projeto. Ao longo dos anos, construímos um sólido histórico de sucesso, transformando ideias em realidade e construindo sonhos que perduram por gerações." 
+                text="Com mais de 5 anos de experiência no mercado, nossa construtora se destaca pela qualidade e excelência em cada projeto. Ao longo dos anos, construímos um sólido histórico de sucesso, transformando ideias em realidade e construindo sonhos que perduram por gerações." 
                 icon={<FcOvertime/>}/>
               <Tag 
                 title="Transparência e Honestidade" 
@@ -36,7 +36,7 @@ export function Home(){
             <Contact>
               <div>
                 <h1>Larga experiência no setor de construção civil.</h1>
-                <p>Mais de 5.000 m² de área construída desde 2014, a Construtora Concreto atua em Tijucas.</p>
+                <p>Mais de 1.000 m² de área construída desde 2018, a Construtora Concreto atua em Tijucas.</p>
                 <section>
                   <Link to ="/sobre">
                     <Button title="SAIBA MAIS"/>
@@ -48,7 +48,7 @@ export function Home(){
               </div>
               <div>
                 <p>+ de</p>
-                <h1>5.000m²</h1>
+                <h1>1.000m²</h1>
                 <p>de área construida</p>
               </div>
             </Contact>

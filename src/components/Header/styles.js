@@ -25,14 +25,19 @@ export const Container = styled.header`
   a:hover{
     border-bottom: 3px solid ${({theme})=>theme.COLORS.BLUE};
   }
-
+  
   img {
     width: 300px;
   }
-
-  div {
+  
+  ul {
     display: flex;
     gap: 30px;
+    list-style: none;
+  }
+  
+  .active{
+    border-bottom: 3px solid ${({theme})=>theme.COLORS.BLUE};
   }
 
 `;

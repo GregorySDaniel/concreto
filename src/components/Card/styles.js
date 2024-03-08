@@ -19,4 +19,9 @@ export const Container = styled.div`
  img {
   width: 100%;
  }
+ transition: transform 0.2s;
+
+  &:hover{
+  transform: scale(1.05);
+  }
 `

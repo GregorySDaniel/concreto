@@ -33,13 +33,21 @@ export const Text = styled.div`
 
   p {
     font-size: 22px;
+    padding: 4px;
+    border-left: 3px solid ${({theme})=>theme.COLORS.WHITE};
   }
 
   section {
     display: flex;
     flex-direction: column;
     gap: 12px;
+
+    :nth-child(1){
+      border-left: 3px solid ${({theme})=>theme.COLORS.BLUE};
+    }
   }
+
+  
 `
 
 export const Grid = styled.div`
