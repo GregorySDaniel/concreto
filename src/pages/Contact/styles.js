@@ -1,10 +1,11 @@
 import styled from 'styled-components';
+import background from '../../assets/bg3.png'
 
 export const Container = styled.div`
   width: 100%;
   height: 100vh;
   display: grid;
-  gap: 100px;
+
 
   grid-template-rows: 80px auto 50px;
   grid-template-areas: 
@@ -14,43 +15,54 @@ export const Container = styled.div`
 `;
 
 export const Main = styled.div`
-  grid-area: content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(${background});
+  background-size: cover;
+  `;
+
+export const ContactBox = styled.div`
+  color: ${({theme})=>theme.COLORS.WHITE};
+  background-color: ${({theme}) => theme.COLORS.BLUE};
+  padding: 100px;
+
+  
   display: flex;
   flex-direction: column;
-  padding: 0 250px;
-  align-items: center;
-  gap: 20px;
-`;
+  
+  gap: 50px;
 
-export const Form = styled.form`
-  margin-bottom: 20px;
-`;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
 
-export const Label = styled.label`
-  display: block;
-  margin-bottom: 10px;
-`;
+  h1{
+    font-size: 56px;
+  }
+  
+  section {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  section a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 24px;
+    color: ${({theme})=>theme.COLORS.WHITE};
+    padding: 20px 50px;
 
-export const Input = styled.input`
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-`;
+    padding: 30px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
 
-export const Textarea = styled.textarea`
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-`;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+  
+    transition: transform 0.2s;
 
-export const Button = styled.button`
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  cursor: pointer;
-
-  &:hover {
-    background-color: #0056b3;
+    &:hover{
+    transform: scale(1.1);
+    }
   }
 `;
