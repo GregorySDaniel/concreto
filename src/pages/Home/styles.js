@@ -2,23 +2,23 @@ import styled from "styled-components";
 import background2 from '../../assets/bg-2.png'
 
 export const Container = styled.div`
-  width: 100%;
+  width: 99vw;
   height: 100vh;
   display: grid;
-
+  
   grid-template-rows: 80px auto 50px;
   grid-template-areas: 
   "header"
   "content"
   "footer";
-
-`;
-
-export const Main = styled.div`
+  
+  `;
+  
+  export const Main = styled.div`
   grid-area: content;
   display: flex;
   flex-direction: column;
-
+  width: 99vw;
 `;
 
 export const Intro = styled.div`
@@ -62,6 +62,7 @@ export const Contact = styled.div`
   color: ${({theme})=>theme.COLORS.WHITE};
   display: flex;
   gap: 100px;
+  width: 99vw;  
 
   h1{
     font-size: 36px;
