@@ -14,7 +14,7 @@ export const Container = styled.header`
   align-items: center;
   
   a {
-    color: ${({theme})=>theme.COLORS.BLACK};
+    color: ${({theme})=>theme.COLORS.TEXT};
     font-size: 18px;
     font-weight: 600;
     padding: 2px;
