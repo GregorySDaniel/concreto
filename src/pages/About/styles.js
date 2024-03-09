@@ -33,7 +33,7 @@ export const AboutUs = styled.div`
   div {
     margin-left: -200px;
     padding: 20px;
-    width: 400px;
+    width: 500px;
     gap: 30px;
     color: ${({theme})=>theme.COLORS.WHITE};
     background-color: ${({theme})=>theme.COLORS.BLUE};

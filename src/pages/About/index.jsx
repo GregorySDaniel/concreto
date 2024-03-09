@@ -15,24 +15,31 @@ export function About () {
         <AboutUs>
           <img src={img} alt="" />
           <div>
-          <p>A Construtora Concreto, localizada em <strong>Tijucas</strong>, é uma empresa renomada no ramo da construção civil, com mais de 5 anos de experiência e mais de 10 projetos realizados com sucesso. Nosso compromisso com a excelência e a qualidade nos projetos nos tornou referência na região.</p>  
-          <p>Nos destacamos pela atenção aos detalhes, cumprimento rigoroso de prazos e uso de materiais de alta qualidade, garantindo a satisfação de nossos clientes. </p>
+            <p>
+              A empresa Concreto Construções e Empreendimentos Ltda, localizada em <strong>Tijucas/SC</strong>, é uma empresa do ramo da construção civil, que vem crescendo com confiança e solidez.
+            </p>
+            <p>
+            Atuamos na construção de condomínio de casas e apartamentos, buscando em cada novo empreendimento inovar e superar expectativas. Sempre prezando pela qualidade, pela ética, transparência e respeito, pilares que nos tornaram uma referência na região.
+            </p>
+            <p>
+            Nossos empreendimentos se destacam pela atenção aos detalhes, pelo cumprimento rigoroso de prazos e uso de materiais de alta qualidade, garantindo assim a satisfação de nossos clientes.
+            </p>
           </div>
         </AboutUs>
         <TagsSection>
           <div>
            <FcOk/>
-           <h1>10</h1> 
+           <h1>10+</h1> 
            <p>Projetos Completados</p>
           </div>
           <div>
             <FcStatistics/>
-           <h1>5</h1>
+           <h1>6</h1>
            <p>Anos no negócio</p>
           </div>
           <section>
-            <h1>5 anos de experiência</h1>
-            <p>Desde 2018, nossa empresa tem se destacado na prestação de serviços de construção para clientes em Tijucas.</p>
+            <h1>6 anos de experiência</h1>
+            <p>Desde 2017, nossa empresa tem se destacado na prestação de serviços de construção para clientes em Tijucas e região.</p>
             <Link to="/contato">
               <Button title="Entre em Contato"/>
             </Link>
