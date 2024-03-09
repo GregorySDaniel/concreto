@@ -36,7 +36,7 @@ export function Home(){
             <Contact>
               <div>
                 <h1>Larga experiência no setor de construção civil.</h1>
-                <p>Mais de 1.000 m² de área construída desde 2018, a Construtora Concreto atua em Tijucas.</p>
+                <p>Mais de 2.000 m² de área construída desde 2017, <br />a Construtora Concreto atua em Tijucas e região.</p>
                 <section>
                   <Link to ="/sobre">
                     <Button title="SAIBA MAIS"/>
@@ -48,7 +48,7 @@ export function Home(){
               </div>
               <div>
                 <p>+ de</p>
-                <h1>1.000m²</h1>
+                <h1>2.000m²</h1>
                 <p>de área construida</p>
               </div>
             </Contact>
