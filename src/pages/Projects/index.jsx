@@ -2,13 +2,22 @@ import { Container, Main, Text, Grid } from './styles'
 import { Card } from '../../components/Card'
 import { Header } from '../../components/Header'
 import { Footer } from '../../components/Footer'
+import { api } from '../../services/api'
+import { useEffect, useState } from 'react'
 import img from '../../assets/background2.jpg'
 
 export function Projects(){
-  const data = [{id: 1, image: img, title: "Residencial Concreto X", adress: "2715 Ash Dr. San Jose, South Dakota"}, 
-  {id: 2, image: img, title: "Residencial Concreto 2", adress: "2715 Ash Dr. San Jose, South Dakota"}, 
-  {id: 3, image: img, title: "Residencial Concreto 2", adress: "2715 Ash Dr. San Jose, South Dakota"}, 
-  {id: 4, image: img, title: "Residencial Concreto 2", adress: "2715 Ash Dr. San Jose, South Dakota"}]
+  const [projects, setProjects] = useState([]);
+
+  useEffect(() => {
+    async function fetchData(){
+      const response = await api.get("/projetos");
+      setProjects(response.data.projects);
+    }
+    fetchData();
+  }, [projects]);
+
+
 return(
   <Container>
     <Header/>
@@ -22,9 +31,9 @@ return(
         </section>
       </Text>
       <Grid>
-        {data.map((card)=>(
-          <Card key={card.id} image={card.image} title={card.title} adress={card.adress}/>
-        ))}
+        {projects.map((project)=>(
+          <Card image={img} key={project.id} title={project.title} adress={project.description}/>
+        )) }
       </Grid>
     </Main>
     <Footer/>
