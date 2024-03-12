@@ -21,15 +21,13 @@ export function Admin(){
         <h2>Login</h2>
         <form>
           <label>
-            Name:
+            Nome:
             <input type="text" value={name} onChange={e => setName(e.target.value)} />
           </label>
-          <br />
           <label>
-            Password:
+            Senha:
             <input type="password" value={password} onChange={e => setPassword(e.target.value)} />
           </label>
-          <br />
           <button type="submit" onClick={handleSubmit}>Login</button>
         </form>
       </Main>
