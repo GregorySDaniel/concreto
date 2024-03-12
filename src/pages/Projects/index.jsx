@@ -32,7 +32,7 @@ return(
       </Text>
       <Grid>
         {projects.map((project)=>(
-          <Card image={img} key={project.id} title={project.title} adress={project.description}/>
+          <Card image={img} key={project.id} title={project.title} adress={project.adress}/>
         )) }
       </Grid>
     </Main>
