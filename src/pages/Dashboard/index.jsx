@@ -9,6 +9,7 @@ import { useState, useEffect } from 'react'
 import img from '../../assets/background2.jpg'
 import { TiDeleteOutline } from "react-icons/ti";
 import { CiLogout } from "react-icons/ci";
+import { Link } from 'react-router-dom'
 
 
 
@@ -43,7 +44,9 @@ export function Dashboard(){
         )) }
         </Grid>
         <section>
-        <Button title="Cadastrar projeto"/>
+        <Link to= "/new">
+        <Button title="Adicionar projeto"/>
+        </Link>
         <CiLogout onClick={signOut}/>
         </section>
       </Main>

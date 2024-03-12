@@ -27,11 +27,12 @@ export const Main = styled.div`
 
   > section {
     display: flex;
-    gap: 30px;
+    gap: 90px;
     justify-content: center;
     width: 50%;
     align-items: center;
     font-size: 64px;
+
   }
 `;
 
