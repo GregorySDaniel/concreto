@@ -4,6 +4,7 @@ import { Home } from '../pages/Home'
 import { About } from '../pages/About'
 import { Contact } from '../pages/Contact'
 import { Projects } from '../pages/Projects'
+import { NewProject } from '../pages/NewProject'
 
 export function AdminRoutes(){
   return(
@@ -13,6 +14,7 @@ export function AdminRoutes(){
       <Route path="/contato" element={<Contact/>}/>
       <Route path="/projetos" element={<Projects/>}/>
       <Route path="/admin" element={<Dashboard/>}/>
+      <Route path="/new" element={<NewProject/>}/>
     </Routes>
   )
 }
