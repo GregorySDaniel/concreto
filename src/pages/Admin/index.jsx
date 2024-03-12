@@ -10,7 +10,8 @@ export function Admin(){
 
   const { signIn } = useAuth();
 
-  function handleSubmit({name, password}){
+  function handleSubmit(e){
+    e.preventDefault();
     signIn({name, password})
   }
   return(
@@ -29,7 +30,7 @@ export function Admin(){
             <input type="password" value={password} onChange={e => setPassword(e.target.value)} />
           </label>
           <br />
-          <button type="submit" onClick={handleSubmit()}>Login</button>
+          <button type="submit" onClick={handleSubmit}>Login</button>
         </form>
       </Main>
       <Footer/>
