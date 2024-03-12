@@ -5,9 +5,12 @@ import { Button } from '../../components/Button'
 import img from '../../assets/background1.jpg'
 import { Link } from 'react-router-dom'
 import { FcStatistics, FcOk } from "react-icons/fc";
+import { useContext } from 'react'
+import { useAuth } from '../../hooks/auth'
 
 
 export function About () {
+  console.log(useAuth())
   return(
     <Container>
       <Header/>
