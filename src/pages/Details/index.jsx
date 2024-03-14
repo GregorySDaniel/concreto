@@ -10,8 +10,7 @@ import img from '../../assets/bg3.png'
 export function Details(){
     const {id} = useParams();
     const [project, setProject] = useState(null);
-    console.log(project)
-
+    
     useEffect(() => {
         async function fetchData() {
             try {
@@ -34,12 +33,14 @@ export function Details(){
             <Main>
                 {project ? (
                     <div>
-                        <img src={img} alt="Imagem do Empreendimento" />
+                        {project.data.imgs.lenght>0 ? project.data.imgs.map((img, index) => (
+                            <img key={index} src={img.imagem} alt="Imagem do empreendimento" />
+                        )) : <img src={img}/> }
                         <section>
-                        <h1>{project.data.title}</h1>
-                        <><p><strong>Endereço:</strong></p> <p>{project.data.adress}</p></>
-                        <><p><strong>Descrição:</strong></p> <p>{project.data.description}</p></>
-                        <><p><strong>Status:</strong></p> <p>{(project.data.status="done") ? "Finalizado" : "Em progresso"}</p></>
+                        <h1>{project.data.project.title}</h1>
+                        <><p><strong>Endereço:</strong></p> <p>{project.data.project.adress}</p></>
+                        <><p><strong>Descrição:</strong></p> <p>{project.data.project.description}</p></>
+                        <><p><strong>Status:</strong></p> <p>{(project.data.project.status="done") ? "Finalizado" : "Em progresso"}</p></>
                         <><p>Para mais informações <strong><a href="/contato">entre em contato.</a></strong></p></>
                         </section>
                     </div>

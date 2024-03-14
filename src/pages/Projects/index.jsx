@@ -33,7 +33,7 @@ return(
       </Text>
       <Grid>
         {projects.map((project)=>(
-          <a href={`/projetos/${project.id}`}><Card image={img} key={project.id} title={project.title} adress={project.adress}/></a>
+          <a key={project.id} href={`/projetos/${project.id}`}><Card image={img} title={project.title} adress={project.adress}/></a>
         )) }
       </Grid>
     </Main>
