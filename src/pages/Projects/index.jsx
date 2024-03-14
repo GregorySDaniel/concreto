@@ -6,6 +6,7 @@ import { api } from '../../services/api'
 import { useEffect, useState } from 'react'
 import img from '../../assets/background2.jpg'
 
+
 export function Projects(){
   const [projects, setProjects] = useState([]);
 
@@ -32,7 +33,7 @@ return(
       </Text>
       <Grid>
         {projects.map((project)=>(
-          <Card image={img} key={project.id} title={project.title} adress={project.adress}/>
+          <a href={`/projetos/${project.id}`}><Card image={img} key={project.id} title={project.title} adress={project.adress}/></a>
         )) }
       </Grid>
     </Main>

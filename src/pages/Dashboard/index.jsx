@@ -39,7 +39,7 @@ export function Dashboard(){
         {projects.map((project)=>(
           <div key={project.id}>
           <TiDeleteOutline size={32} onClick={()=> {handleDelete(project.title, project.id)}}/>
-          <Card image={img} title={project.title} />
+          <a href={`/projetos/${project.id}`}><Card image={img} title={project.title} /></a>
           </div>
         )) }
         </Grid>
