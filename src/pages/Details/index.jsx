@@ -35,14 +35,13 @@ export function Details(){
                 {project ? (
                     <div>
                         <img src={img} alt="Imagem do Empreendimento" />
-                        <h1>{project.data.title}</h1>
                         <section>
+                        <h1>{project.data.title}</h1>
                         <><p><strong>Endereço:</strong></p> <p>{project.data.adress}</p></>
                         <><p><strong>Descrição:</strong></p> <p>{project.data.description}</p></>
                         <><p><strong>Status:</strong></p> <p>{(project.data.status="done") ? "Finalizado" : "Em progresso"}</p></>
+                        <><p>Para mais informações <strong><a href="/contato">entre em contato.</a></strong></p></>
                         </section>
-                        <h1>Para mais informações entre em contato</h1>
-                        <a href="/contato"><Button title="CONTATO"/></a>
                     </div>
                 ) : (
                     <p>Carregando...</p>
