@@ -5,7 +5,6 @@ import { AdminRoutes } from "./admin.routes";
 
 export function Routes() {
   const { user } = useAuth()
-  console.log(user)
   return(
     <BrowserRouter>
       {user ? <AdminRoutes/> : <AppRoutes/>}

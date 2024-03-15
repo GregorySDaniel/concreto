@@ -10,13 +10,22 @@ export function NewProject(){
   const [description, setDescription] = useState("");
   const [adress, setAdress] = useState("");
   const [status, setStatus] = useState("done");
+  const [imagesFile, setImagesFile] = useState(null);
 
   const navigate = useNavigate();
 
   async function handleSubmit(e){
     e.preventDefault();
     try {
-      await api.post("/projetos", {title, description, adress, status});
+      const fileUploadForm = new FormData();
+      fileUploadForm.append("title", title);
+      fileUploadForm.append("description", description);
+      fileUploadForm.append("adress", adress);
+      fileUploadForm.append("status", status);
+      for (let i = 0; i < imagesFile.length; i++) {
+        fileUploadForm.append("imgs", imagesFile[i]);
+      }
+      await api.post("/projetos", fileUploadForm);
       alert("Empreendimento adicionado com sucesso!")
       navigate("/admin");
     } catch (e) {
@@ -27,6 +36,13 @@ export function NewProject(){
       }
     }
   }
+
+  async function handleUploadImages(e){
+    const files = e.target.files;
+    setImagesFile(files);
+  }
+
+  console.log(imagesFile)
 
   return(
     <Container>
@@ -52,6 +68,10 @@ export function NewProject(){
           <label>
             Descrição:
             <textarea type="text" value={description} onChange={e => setDescription(e.target.value)} required/>
+          </label>
+          <label>
+            Imagens (até 5):
+            <input type="file" multiple required onChange={handleUploadImages}/>
           </label>
           <button type="submit">Adicionar</button>
         </form>

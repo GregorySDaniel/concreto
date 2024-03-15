@@ -1,21 +1,36 @@
-import { Container, Main } from './styles.js'
+import { Container, Main, Slide } from './styles.js'
 import {Header} from '../../components/Header'
 import {Footer} from '../../components/Footer'
-import {Button} from '../../components/Button'
 import { api } from '../../services/api'
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import img from '../../assets/bg3.png'
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 export function Details(){
     const {id} = useParams();
     const [project, setProject] = useState(null);
+    const [images, setImages] = useState([])
+    console.log(images)
     
     useEffect(() => {
         async function fetchData() {
             try {
                 const data = await api.get(`/projetos/${id}`);
                 setProject(data);
+                
+                const imagesPromises = data.data.imgs.map(async (image) => {
+                    const img = await api.get(`${api.defaults.baseURL}/files/${image.img}`);
+                    return img.config.url;
+                });
+
+                
+                const imagesUrls = await Promise.all(imagesPromises);
+                setImages(imagesUrls);
+                
             } catch (e) {
                 if (e.message) {
                     alert(e.message);
@@ -28,14 +43,26 @@ export function Details(){
     }, [id]);
 
     return(
-        <Container>
+        <Container> 
             <Header/>
             <Main>
                 {project ? (
                     <div>
-                        {project.data.imgs.lenght>0 ? project.data.imgs.map((img, index) => (
-                            <img key={index} src={img.imagem} alt="Imagem do empreendimento" />
-                        )) : <img src={img}/> }
+                        <Slide>
+                        <Swiper
+                        className="mySwiper"
+                        modules={[Navigation, Pagination]}
+                        spaceBetween={50}
+                        slidesPerView={1}
+                        navigation
+                        pagination={{ clickable: true }}>
+                        {images.map((img, index) => (
+                            <SwiperSlide className="swiper-slide" key={index}>
+                                <img src={img} alt='Imagem do empreendimento'/>
+                            </SwiperSlide>
+                        ))}
+                        </Swiper>
+                        </Slide>
                         <section>
                         <h1>{project.data.project.title}</h1>
                         <><p><strong>Endereço:</strong></p> <p>{project.data.project.adress}</p></>

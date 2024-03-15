@@ -21,7 +21,7 @@ export const Main = styled.div`
   align-items: center;
   padding: 0 250px;
 
-  div {
+  > div {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -39,7 +39,7 @@ export const Main = styled.div`
       gap: 10px;
       text-align: left;
       margin: 60px 0;
-      padding: 30px;
+      padding: 30px 250px;
       p, a {
         font-size: 18px;
         color: ${({theme})=>theme.COLORS.TEXT};
@@ -54,11 +54,27 @@ export const Main = styled.div`
   }
 
 
-  img {
+    img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;  
+  }
+`;
+
+export const Slide = styled.div`
+  width: 99vw;
+  padding: 0 350px;
+  height: 50vh;
+
+  .mySwiper {
     width: 100%;
-    border: 10px solid ${({theme}) => theme.COLORS.BLUE};
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    background-color: #f9f9f9;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+
+    .swiper-slide {
+      width: auto;
+      height: auto;
+    }
   }
 `;
