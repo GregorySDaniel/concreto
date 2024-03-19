@@ -9,6 +9,7 @@ export const Container = styled.div`
  background-color: ${({theme})=>theme.COLORS.BLUE};
 
  width: 100%;
+ height: 100%;
 
  section {
   display: flex;
@@ -16,10 +17,13 @@ export const Container = styled.div`
   text-align: center;
   padding: 20px;
  }
+
  img {
+  object-fit: fill;
   width: 100%;
   height: 100%;
  }
+
  transition: transform 0.2s;
 
   &:hover{

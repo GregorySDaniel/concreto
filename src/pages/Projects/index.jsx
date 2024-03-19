@@ -9,31 +9,45 @@ import img from '../../assets/background2.jpg'
 
 export function Projects(){
   const [projects, setProjects] = useState([]);
+  const [filteredProjects, setFilteredProjects] = useState([]);
+  
 
   useEffect(() => {
     async function fetchData(){
       const response = await api.get("/projetos");
-      setProjects(response.data.projects);
+      const projectsWithImages = await Promise.all(response.data.projects.map(async (project) => {
+        const img = await api.get(`${api.defaults.baseURL}/files/${project.img}`);
+        return {...project, imageUrl: img.config.url};
+      }));
+      setProjects(projectsWithImages);
+      setFilteredProjects(projectsWithImages);
     }
     fetchData();
-  }, [projects]);
+  }, []); 
 
-
-return(
-  <Container>
+  
+  function handleFilter(status) {
+    const filtered = projects.filter(project => project.status === status);
+    setFilteredProjects(filtered);
+  }
+  
+  return(
+    <Container>
     <Header/>
     <Main>  
       <Text>
         <h1>Projetos</h1>
         <section>
-          <p>Todos</p>
-          <p>Em andamento</p>
-          <p>Concluidos</p>
+          <ul>
+              <li><button onClick={() => setFilteredProjects(projects)}><p>Todos</p></button></li>
+              <li><button onClick={() => handleFilter('progress')}><p>Em andamento</p></button></li>
+              <li><button onClick={() => handleFilter('done')}><p>Concluídos</p></button></li>
+          </ul>
         </section>
       </Text>
       <Grid>
-        {projects.map((project)=>(
-          <a key={project.id} href={`/projetos/${project.id}`}><Card image={img} title={project.title} adress={project.adress}/></a>
+        {filteredProjects.map((project)=>(
+          <a key={project.id} href={`/projetos/${project.id}`}><Card image={project.imageUrl} title={project.title} adress={project.adress}/></a>
         )) }
       </Grid>
     </Main>

@@ -19,7 +19,7 @@ export const Main = styled.div`
   padding: 0 250px;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 200px;
   
   svg:hover {
     cursor: pointer;

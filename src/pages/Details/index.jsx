@@ -14,7 +14,6 @@ export function Details(){
     const {id} = useParams();
     const [project, setProject] = useState(null);
     const [images, setImages] = useState([])
-    console.log(images)
     
     useEffect(() => {
         async function fetchData() {
@@ -27,7 +26,6 @@ export function Details(){
                     return img.config.url;
                 });
 
-                
                 const imagesUrls = await Promise.all(imagesPromises);
                 setImages(imagesUrls);
                 

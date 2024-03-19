@@ -32,6 +32,7 @@ export const Text = styled.div`
   }
 
   p {
+    text-align: left;
     font-size: 22px;
     padding: 4px;
     border-left: 3px solid ${({theme})=>theme.COLORS.WHITE};
@@ -41,12 +42,16 @@ export const Text = styled.div`
     display: flex;
     flex-direction: column;
     gap: 12px;
-
-    :nth-child(1){
-      border-left: 3px solid ${({theme})=>theme.COLORS.BLUE};
-    }
   }
 
+  li{
+    list-style: none;
+  }
+
+  button{
+    background: none;
+    border: none;
+  }
   
 `
 
