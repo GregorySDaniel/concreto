@@ -20,7 +20,11 @@ export function Dashboard(){
   useEffect(() => {
     async function fetchData(){
       const response = await api.get("/projetos");
-      setProjects(response.data.projects);
+      const projectsWithImages = await Promise.all(response.data.projects.map(async (project) => {
+        const img = await api.get(`${api.defaults.baseURL}/files/${project.img}`);
+        return {...project, imageUrl: img.config.url};
+      }));
+      setProjects(projectsWithImages);
     }
     fetchData();
   }, [projects]);
@@ -39,7 +43,7 @@ export function Dashboard(){
         {projects.map((project)=>(
           <div key={project.id}>
           <TiDeleteOutline size={32} onClick={()=> {handleDelete(project.title, project.id)}}/>
-          <a href={`/projetos/${project.id}`}><Card image={img} title={project.title} /></a>
+          <a href={`/projetos/${project.id}`}><Card image={project.imageUrl} title={project.title} /></a>
           </div>
         )) }
         </Grid>
