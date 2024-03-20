@@ -24,6 +24,11 @@ export const Container = styled.div`
   border: 1px solid #ccc;
   border-radius: 5px;
 
+  form div {
+    display: flex;
+    gap: 20px;
+  }
+
   form {
     display: flex;
     flex-direction: column;

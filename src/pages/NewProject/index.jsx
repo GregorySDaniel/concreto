@@ -10,7 +10,7 @@ export function NewProject(){
   const [description, setDescription] = useState("");
   const [adress, setAdress] = useState("");
   const [status, setStatus] = useState("done");
-  const [imagesFile, setImagesFile] = useState(null);
+  const [imagesFile, setImagesFile] = useState([]);
 
   const navigate = useNavigate();
 
@@ -37,13 +37,12 @@ export function NewProject(){
     }
   }
 
-  async function handleUploadImages(e){
+  async function handleUploadImages(e) {
     const files = e.target.files;
-    setImagesFile(files);
+    setImagesFile([...imagesFile, ...files]);
   }
-
-  console.log(imagesFile)
-
+  
+  
   return(
     <Container>
       <Header/>
@@ -69,10 +68,16 @@ export function NewProject(){
             Descrição:
             <textarea type="text" value={description} onChange={e => setDescription(e.target.value)} required/>
           </label>
+          <div>
           <label>
-            Imagens (até 5):
+            Imagem de capa:
+            <input type="file" required onChange={handleUploadImages}/>
+          </label>
+          <label>
+            Outras imagens (até 4):
             <input type="file" multiple required onChange={handleUploadImages}/>
           </label>
+          </div>
           <button type="submit">Adicionar</button>
         </form>
       </Main>

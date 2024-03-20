@@ -6,7 +6,6 @@ import { Button } from '../../components/Button'
 import { Card } from '../../components/Card'
 import { api } from '../../services/api'
 import { useState, useEffect } from 'react'
-import img from '../../assets/background2.jpg'
 import { TiDeleteOutline } from "react-icons/ti";
 import { CiLogout } from "react-icons/ci";
 import { Link } from 'react-router-dom'
