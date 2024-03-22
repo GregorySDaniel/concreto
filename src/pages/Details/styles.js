@@ -4,9 +4,9 @@ export const Container = styled.div`
   width: 100%;
   height: 100vh;
   display: grid;
-  gap: 100px;
+  gap: 6rem;
 
-  grid-template-rows: 80px auto 50px;
+  grid-template-rows: 5rem auto 3rem;
   grid-template-areas: 
   "header"
   "content"
@@ -19,7 +19,7 @@ export const Main = styled.div`
   flex-direction: column;
   width: 99vw;
   align-items: center;
-  padding: 0 250px;
+  padding: 0 15rem;
 
   > div {
     display: flex;
@@ -38,16 +38,16 @@ export const Main = styled.div`
       flex-direction: column;
       gap: 10px;
       text-align: left;
-      margin: 60px 0;
-      padding: 30px 250px;
+      margin: 3.2rem 0;
+      padding: 2rem 15rem;
       p, a {
-        font-size: 18px;
+        font-size: 1rem;
         color: ${({theme})=>theme.COLORS.TEXT};
       }
       
       h1 {
         text-align: center;
-        font-size: 36px;
+        font-size: 2.2rem;
         margin-bottom: 10px;
       }
     }
@@ -63,7 +63,7 @@ export const Main = styled.div`
 
 export const Slide = styled.div`
   width: 99vw;
-  padding: 0 350px;
+  padding: 0 20rem;
   height: 50vh;
 
   .mySwiper {

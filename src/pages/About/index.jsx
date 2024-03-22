@@ -5,13 +5,17 @@ import { Button } from '../../components/Button'
 import img from '../../assets/background1.jpg'
 import { Link } from 'react-router-dom'
 import { FcStatistics, FcOk } from "react-icons/fc";
+import { SideMenu } from '../../components/SideMenu'
+import { useState } from 'react'
 
 
 export function About () {
+
   return(
     <Container>
       <Header/>
-      <Main>  
+      <Main>
+        <SideMenu/>
         <AboutUs>
           <img src={img} alt="" />
           <div>

@@ -6,6 +6,7 @@ import { Tag } from '../../components/Tag'
 import { Link } from "react-router-dom"
 import backgoundImg from '../../assets/background.jpg'
 import { FcOvertime, FcCollaboration, FcLandscape } from "react-icons/fc";
+import { SideMenu } from "../../components/SideMenu"
 
 
 export function Home(){
@@ -13,11 +14,11 @@ export function Home(){
     <Container>
       <Header/>
         <Main>
+        <SideMenu/>
             <Intro>
               <img src={backgoundImg} alt="Imagem de um Projeto" />
               <div className="gradient"></div>
             </Intro>
-
             <Tags>
               <Tag 
                 title="Experiência de mercado" 

@@ -12,14 +12,14 @@ export const Container = styled.footer`
 
 export const Info = styled.div`
   background: ${({theme}) => theme.COLORS.BLUE_100};
-  padding: 20px 200px;
+  padding: 1rem 0;
   width: 100%;
 
   display: flex;
 
   justify-content: center;
   align-items: center;
-  gap: 150px;
+  gap: 7rem;
 
   div {
     display: flex;
@@ -28,12 +28,15 @@ export const Info = styled.div`
   }
 
   h1 {
-    font-size: 24px;
+    font-size: 1.5rem;
     color: ${({theme})=> theme.COLORS.BLUE}
   }
 
   img {
-    width: 200px;
+    width: 15rem;
+    @media(max-width: 1280px){
+      display: none;
+    }
   }
 `;
 
@@ -44,6 +47,11 @@ export const Copyright = styled.div`
   justify-content: center;
 
   padding: 10px;
+  @media(max-width: 1280px){
+      p {
+        font-size: .6rem;
+      }
+    }
   
   p {
     color: ${({theme})=>theme.COLORS.WHITE}

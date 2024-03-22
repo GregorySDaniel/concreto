@@ -5,7 +5,7 @@ export const Container = styled.div`
   height: 100vh;
   display: grid;
   
-  grid-template-rows: 80px auto 50px;
+  grid-template-rows: 5rem auto 3rem;
   grid-template-areas: 
   "header"
   "content"
@@ -20,25 +20,25 @@ export const Container = styled.div`
 
   gap: 10px;
   margin: auto;
-  padding: 100px;
+  padding: 6rem;
   border: 1px solid #ccc;
   border-radius: 5px;
 
   form div {
     display: flex;
-    gap: 20px;
+    gap: 1rem;
   }
 
   form {
     display: flex;
     flex-direction: column;
-    width: 500px;
+    width: 30rem;
     
   }
   
   select {
     padding: 5px;
-    font-size: 16px;
+    font-size: 1rem;
     border: 1px solid #ccc;
     border-radius: 3px;
     display: flex;
@@ -76,7 +76,7 @@ export const Container = styled.div`
   }
 
   textarea{
-    height: 130px;
+    height: 8rem;
   }
 
   button {

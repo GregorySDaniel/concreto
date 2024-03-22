@@ -38,9 +38,14 @@ export function NewProject(){
   }
 
   async function handleUploadImages(e) {
-    const files = e.target.files;
-    setImagesFile([...imagesFile, ...files]);
+    const files = Array.from(e.target.files);
+    if (imagesFile.length + files.length <= 5) {
+      setImagesFile([...imagesFile, ...files]);
+    } else {
+      alert('Você só pode adicionar até 5 imagens.');
+    }
   }
+  
   
   
   return(

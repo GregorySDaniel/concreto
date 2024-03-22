@@ -4,18 +4,18 @@ export const Container = styled.header`
   grid-area: header;
   width: 100%;
   height: 100%;
-  padding: 10px 250px;
+
 
   background-color: ${({theme})=> theme.COLORS.BLUE_100};
   
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-direction: row;
   align-items: center;
   
   a {
     color: ${({theme})=>theme.COLORS.TEXT};
-    font-size: 18px;
+    font-size: 1rem;
     font-weight: 600;
     padding: 2px;
     border-bottom: 3px solid ${({theme})=>theme.COLORS.BLUE_100};
@@ -27,13 +27,16 @@ export const Container = styled.header`
   }
   
   img {
-    width: 300px;
+    width: 19rem;
   }
   
   ul {
     display: flex;
-    gap: 30px;
+    gap: 2rem;
     list-style: none;
+    @media (max-width: 1280px) {
+      display: none;
+    }
   }
   
   .active{
@@ -41,3 +44,14 @@ export const Container = styled.header`
   }
 
 `;
+
+export const Menu = styled.button`
+  background: none;
+  border: none;
+  display: none;
+  position: relative;
+  @media (max-width: 1280px) {
+    display: block;
+  }
+`;
+

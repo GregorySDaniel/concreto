@@ -4,9 +4,9 @@ export const Container = styled.div`
   width: 100%;
   height: 99vh;
   display: grid;
-  gap: 100px;
+  gap: 6rem;
 
-  grid-template-rows: 80px auto 50px;
+  grid-template-rows: 5rem auto 3rem;
   grid-template-areas: 
   "header"
   "content"
@@ -21,7 +21,7 @@ export const Main = styled.div`
   gap: 10px;
 
   margin: auto;
-  padding: 20px;
+  padding: 1.2rem;
   border: 1px solid #ccc;
   border-radius: 5px;
 

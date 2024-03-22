@@ -13,7 +13,7 @@ export default createGlobalStyle`
 
   body, input, button, textarea, a {
     font-family: "Work Sans", sans-serif;
-    font-size: 16px;
+    font-size: 1rem;
   }
 
   a {

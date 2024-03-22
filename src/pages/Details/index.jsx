@@ -2,6 +2,7 @@ import { Container, Main, Slide } from './styles.js'
 import {Header} from '../../components/Header'
 import {Footer} from '../../components/Footer'
 import { api } from '../../services/api'
+import { SideMenu } from '../../components/SideMenu/index.jsx'
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';

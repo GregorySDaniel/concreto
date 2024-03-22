@@ -6,8 +6,8 @@ export const Container = styled.div`
   
   background-image: linear-gradient(to bottom, #ffffff, #f0f0f0); 
 
-  width: 300px;
-  padding: 20px;
+  width: 18rem;
+  padding: 1.2rem;
   gap: 10px;
   
   display: flex;
@@ -23,11 +23,11 @@ export const Container = styled.div`
   }
 
   svg {
-    font-size: 50px;
+    font-size: 3rem;
   }
 
   h1 {
-    font-size: 24px;
+    font-size: 1.5rem;
     text-align: center;
   }
 

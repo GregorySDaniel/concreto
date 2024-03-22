@@ -2,12 +2,14 @@ import { Container, Main, ContactBox } from './styles'
 import { Header } from '../../components/Header';
 import { Footer } from '../../components/Footer';
 import { MdEmail, MdWhatsapp } from "react-icons/md";
+import { SideMenu } from '../../components/SideMenu';
 
 export function Contact(){
   return(
     <Container>
       <Header/>
         <Main>
+        <SideMenu/>
         <ContactBox>
         <h1>Entre em contato</h1>
         <section>
